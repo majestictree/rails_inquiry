@@ -1,24 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Docker + Railsで作る問い合わせアプリ
 
-Things you may want to cover:
+docker上のRailsで動作する問い合わせフォームを作成 
+ 
+以下編集中
+# DEMO
+ 
+# Features
+ 
+# Requirement
+ 
+# Installation
+ 
+# Usage
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```bash
+git clone https://github.com/hoge/~
+cd examples
+```
+ 
+# Note
