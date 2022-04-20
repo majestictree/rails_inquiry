@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<% if session[:user] == 'kanri' %>
+  <p>
+    <strong>Name:</strong>
+    <%= @inquiry.name %>
+  </p>
+
+  <p>
+    <strong>Email:</strong>
+    <%= @inquiry.email %>
+  </p>
+
+  <p>
+    <strong>Purpose:</strong>
+    <%= @inquiry.purpose %>
+  </p>
+
+  <p>
+    <strong>Body:</strong>
+    <%= @inquiry.body %>
+  </p>
+
+  <% if @inquiry.images.attached? %>
+    <p>
+    <% @inquiry.images.each do |i| %>
+      <%= image_tag i %>
+    <% end %>
+    </p>
+  <% end %>
+
+  <%= link_to 'Edit', edit_inquiry_path(@inquiry) %> |
+  <%= link_to 'Back', inquiries_path %>
+<% else %>
+  <p>Thank you for the inquiry!</p>
+<% end %>

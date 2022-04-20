@@ -1,0 +1,9 @@
+FROM ruby:3.0.3
+
+RUN apt-get update -qq && apt-get install -y nano nodejs postgresql-client \
+  && gem install bundler -v "~> 2.2" -N && gem install rails -v "~> 6.1" -N \
+  && mkdir /railsapp
+
+WORKDIR /railsapp
+COPY . /railsapp
+RUN bundle install

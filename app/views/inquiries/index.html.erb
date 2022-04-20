@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Inquiries</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Purpose</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @inquiries.each do |inquiry| %>
+      <tr>
+        <td><%= inquiry.name %></td>
+        <td><%= inquiry.email %></td>
+        <td><%= inquiry.purpose %></td>
+        <td><%= inquiry.body %></td>
+        <td><%= link_to 'Show', inquiry, class: "btn btn-light btn-sm" %></td>
+        <td><%= link_to 'Edit', edit_inquiry_path(inquiry), class: "btn btn-light btn-sm" %></td>
+        <td><%= link_to 'Destroy', inquiry, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Inquiry', new_inquiry_path, class: "btn btn-primary" %>
+
+<br>
+
+<% text = "<b>1</b>\n<i>2</i>\n3 >= a" %>
+<%= text %>
+<hr/>
+<%= h(text) %>
+<hr/>
+<%= simple_format(text) %>
+<hr/>
+<%= strip_tags(text) %>
+<hr/>
+<%= sanitize(text) %>
+<hr/>
+<%= sanitize(text.gsub("\n", "<br>")) %>

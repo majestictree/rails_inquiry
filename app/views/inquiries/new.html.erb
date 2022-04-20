@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="offset-md-3 col-md-6">
+    <h1>New Inquiry</h1>
+      <%= render 'form', inquiry: @inquiry %>
+
+      <% if session[:user] == "admin" %>
+      <%= link_to 'Back', inquiries_path %>
+      <% end %>
+  </div>
+</div>

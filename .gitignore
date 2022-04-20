@@ -1,0 +1,5 @@
+*.rbc
+/log
+/tmp
+.rspec
+/vendor/bundle
